@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import loginImg from './images/login.png';
+import {useNavigate} from 'react-router-dom';
 
 const commonStyle = {
   display: 'flex',
@@ -23,6 +24,7 @@ const buttonStyle = {
 };
 
 export default function Login () {
+  const navigate = useNavigate();
     return (
         <Box sx = {{
           width: '390px',
@@ -76,6 +78,7 @@ export default function Login () {
                   The question should be clear and concise.
                </Typography>
                <Button variant="outlined"
+                  onClick = {()=> navigate('/admin')}
                   sx={{
                     ...buttonStyle,
                     marginTop: '161px',
